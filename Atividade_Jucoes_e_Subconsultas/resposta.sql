@@ -69,3 +69,25 @@ Permissao.expirar_acesso from Usuarios
 inner join Permissao on Permissao.cpf_usuario = Usuarios.cpf
 inner join Salas on Salas.numero = Permissao.numero_sala
 order by Usuarios.nome ASC, Salas.numero ASC;
+
+-- Escreva o código SQL para remover o usuário de CPF 999.999.999-99.
+delete from Usuarios where Usuarios.cpf = '999.999.999-99';
+
+-- Escreva o código SQL para remover todas as permissões do usuário de CPF 111.111.111-11.
+delete from Permissao where Permissao.cpf_usuario = '111.111.111-11';
+
+-- Escreva o código SQL para remover as permissões do usuário de CPF 222.222.222-22 para a sala de número 21.
+delete from Permissao where Permissao.cpf_usuario='222.222.222-22' and Permissao.numero_sala=21;
+  
+-- Escreva o código SQL para atualizar o nome do usuário de CPF 222.222.222-22 para Lucas Mariano.
+update Usuarios set Usuarios.nome='Lucas Mariano' where Usuarios.cpf = '222.222.222-22';
+
+/*Escreva o código SQL para atualizar o nome completo e o nome curto da sala de número 21 para
+Laboratório de Redes de Computadores e LADIR, respectivamente. */
+update Salas set Salas.nome_completo='Laboratório de Redes de Computadores', Salas.nome_curto='LADIR'
+where Salas.numero = 21;
+  
+  
+  
+  
+  

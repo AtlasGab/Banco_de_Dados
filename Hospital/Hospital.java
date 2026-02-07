@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class ConexaoBanco {
+public class Hospital {
 
     private static final String URL = "";
     private static final String USER = "";
